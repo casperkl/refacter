@@ -11,7 +11,7 @@ public class Part {
     }
     
     
-    public boolean EqualsPart(double val)
+    public boolean EqualsPrice(double val)
     {
         return price.eqaulsPrice(val);
     }
