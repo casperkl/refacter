@@ -19,7 +19,7 @@ public class PartTest {
         
         parts.add(new CasingPart(new PartName(""), new Price(DEFAULT_PRICE), new Subtype("")));
         parts.add(new ProcessorPart(new PartName(""), new Price(DEFAULT_PRICE), 0.0));
-        parts.add(new MemoryPart(new PartName(""), new Price(DEFAULT_PRICE), new Subtype(""), 0));
+        parts.add(new MemoryPart(new PartName(""), new Price(DEFAULT_PRICE), new Subtype(""), new Size(0)));
         parts.add(new MotherboardPart(new PartName(""), new Price(DEFAULT_PRICE)));
         
         for (Part p : parts) {
