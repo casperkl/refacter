@@ -11,6 +11,7 @@ public class Computer {
     }
 
     public void AddPart(Part p) {
+        if (p!=null)
         parts.add(p);
     }
 
@@ -32,24 +33,48 @@ public class Computer {
         boolean hasMotherboard = false;
 
         for (Part part : parts) {
-            if (part.GetType().equals("Casing")) {
-                hasCasing = true;
-            }
-            if (part.GetType().equals("Processor")) {
-                hasProcessor = true;
-            }
-            if (part.GetType().equals("Memory")) {
-                hasMemory = true;
-            }
-            if (part.GetType().equals("Motherboard")) {
-                hasMotherboard = true;
-            }
+            hasCasing = isCasing(part, hasCasing);
+            hasProcessor = isProcessor(part, hasProcessor);
+            hasMemory = isMemory(part, hasMemory);
+            hasMotherboard = isMotherboard(part, hasMotherboard);
         }
 
         if (!hasCasing || !hasProcessor || !hasMemory || !hasMotherboard) {
             return false;
-        } else {
+        } 
+            return true;
+        
+    }
+
+    boolean isCasing(Part part, boolean currentValue) {
+        if (part instanceof CasingPart) {
             return true;
         }
+
+        return currentValue;
+    }
+
+    boolean isMemory(Part part, boolean currentValue) {
+        if (part instanceof MemoryPart) {
+            return true;
+        }
+
+        return currentValue;
+    }
+
+    boolean isProcessor(Part part, boolean currentValue) {
+        if (part instanceof ProcessorPart) {
+            return true;
+        }
+
+        return currentValue;
+    }
+
+    boolean isMotherboard(Part part, boolean currentValue) {
+        if (part instanceof MotherboardPart) {
+            return true;
+        }
+
+        return currentValue;
     }
 }
