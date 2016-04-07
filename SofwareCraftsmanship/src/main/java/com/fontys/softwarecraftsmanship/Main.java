@@ -1,5 +1,10 @@
 package com.fontys.softwarecraftsmanship;
 
+import com.fontys.softwarecraftsmanship.parts.MotherboardPart;
+import com.fontys.softwarecraftsmanship.parts.ProcessorPart;
+import com.fontys.softwarecraftsmanship.parts.MemoryPart;
+import com.fontys.softwarecraftsmanship.parts.CasingPart;
+
 public class Main {
 
     public static void main(String[] args) {

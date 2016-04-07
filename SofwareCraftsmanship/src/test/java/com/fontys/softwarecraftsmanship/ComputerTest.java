@@ -1,5 +1,9 @@
 package com.fontys.softwarecraftsmanship;
 
+import com.fontys.softwarecraftsmanship.parts.MotherboardPart;
+import com.fontys.softwarecraftsmanship.parts.ProcessorPart;
+import com.fontys.softwarecraftsmanship.parts.CasingPart;
+import com.fontys.softwarecraftsmanship.parts.MemoryPart;
 import static org.junit.Assert.*;
 
 /**
