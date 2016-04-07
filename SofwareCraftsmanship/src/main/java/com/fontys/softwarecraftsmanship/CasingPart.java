@@ -11,8 +11,8 @@ package com.fontys.softwarecraftsmanship;
  */
 public class CasingPart extends Part {
     
-    public CasingPart(String type, String title, double price, String subtype) {
-        super(type, title, price, subtype);
+    public CasingPart(String title, double price, String subtype) {
+        super(title, price, subtype);
     }
     
 }
