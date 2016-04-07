@@ -11,8 +11,10 @@ package com.fontys.softwarecraftsmanship;
  */
 public class ProcessorPart extends Part {
     
+    double speed;
     public ProcessorPart(String title, double price, double speed) {
-        super(title, price, speed);
+        super(title, price);
+        this.speed=speed;
     }
     
 }

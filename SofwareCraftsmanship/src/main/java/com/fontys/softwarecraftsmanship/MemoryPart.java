@@ -12,8 +12,12 @@ package com.fontys.softwarecraftsmanship;
  */
 public class MemoryPart extends Part{
     
+    String subtype;
+    int size;
     public MemoryPart(String title, double price, String subtype, int size) {
-        super(title, price, subtype, size);
+        super(title, price);
+        this.subtype=subtype;
+        this.size=size;
     }
     
 }
