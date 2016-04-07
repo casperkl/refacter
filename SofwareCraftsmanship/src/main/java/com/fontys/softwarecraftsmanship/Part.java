@@ -12,7 +12,7 @@ public class Part {
     
     
     //Aanwezig voor unittests.
-    public double GetPrice() {
+    public Price GetPrice() {
         return price;
     }
     
