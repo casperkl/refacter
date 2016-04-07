@@ -5,6 +5,7 @@ import java.util.*;
 public class Computer {
 
     List<Part> parts = new ArrayList<>();
+    double price = 0;
 
     public int NumberOfParts() {
         return parts.size();
@@ -14,15 +15,17 @@ public class Computer {
         if (p!=null)
         parts.add(p);
     }
+    
+    public void increasePrice(double increase)
+    {
+        price += increase;
+    }
 
     public double GetPrice() {
-        double price = 0.0;
-
         for (int i = 0; i < NumberOfParts(); i++) {
             Part part = parts.get(i);
-            price += part.GetPrice();
+            part.increasePrice(this);
         }
-
         return price;
     }
 
