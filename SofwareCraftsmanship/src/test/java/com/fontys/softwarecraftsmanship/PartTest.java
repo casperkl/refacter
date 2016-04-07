@@ -18,13 +18,12 @@ public class PartTest {
         List<Part> parts = new ArrayList<>();
         
         parts.add(new CasingPart(new PartName(""), new Price(DEFAULT_PRICE), new Subtype("")));
-        parts.add(new ProcessorPart(new PartName(""), new Price(DEFAULT_PRICE), 0.0));
+        parts.add(new ProcessorPart(new PartName(""), new Price(DEFAULT_PRICE), new Speed(0.0)));
         parts.add(new MemoryPart(new PartName(""), new Price(DEFAULT_PRICE), new Subtype(""), new Size(0)));
         parts.add(new MotherboardPart(new PartName(""), new Price(DEFAULT_PRICE)));
         
         for (Part p : parts) {
             assertTrue(p.EqualsPrice(DEFAULT_PRICE));
-            //assertEquals(DEFAULT_PRICE, p.GetPrice().getValue(),0.0);
         }
     }
 }

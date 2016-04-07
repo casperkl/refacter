@@ -164,7 +164,7 @@ public class ComputerTest {
         
         c.AddPart(new CasingPart(new PartName(""), new Price(0.0), new Subtype("")));
         c.AddPart(new MotherboardPart(new PartName(""), new Price(0.0)));
-        c.AddPart(new ProcessorPart(new PartName(""), new Price(0.0), 0.0));
+        c.AddPart(new ProcessorPart(new PartName(""), new Price(0.0), new Speed(0.0)));
         c.AddPart(new MemoryPart(new PartName(""), new Price(0.0), new Subtype(""), new Size(0)));
         
         assertEquals(true, c.IsComplete());
@@ -186,7 +186,7 @@ public class ComputerTest {
                 c.AddPart(new MotherboardPart(new PartName(""), new Price(0.0)));
             }
             if (i != 2) {
-                c.AddPart(new ProcessorPart(new PartName(""), new Price(0.0), 0.0));
+                c.AddPart(new ProcessorPart(new PartName(""), new Price(0.0), new Speed(0.0)));
             }
             if (i != 3) {
                 c.AddPart(new MemoryPart(new PartName(""), new Price(0.0), new Subtype(""), new Size(0)));

@@ -8,6 +8,7 @@ package com.fontys.softwarecraftsmanship.parts;
 import com.fontys.softwarecraftsmanship.Part;
 import com.fontys.softwarecraftsmanship.PartName;
 import com.fontys.softwarecraftsmanship.Price;
+import com.fontys.softwarecraftsmanship.Speed;
 
 /**
  *
@@ -15,8 +16,8 @@ import com.fontys.softwarecraftsmanship.Price;
  */
 public class ProcessorPart extends Part {
     
-    double speed;
-    public ProcessorPart(PartName title, Price price, double speed) {
+    Speed speed;
+    public ProcessorPart(PartName title, Price price, Speed speed) {
         super(title, price);
         this.speed=speed;
     }
