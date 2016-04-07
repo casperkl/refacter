@@ -1,10 +1,8 @@
 package com.fontys.softwarecraftsmanship;
 
-import java.util.*;
-
 public class Computer {
 
-    List<Part> parts = new ArrayList<>();
+    Partlist parts = new Partlist();
     double price = 0;
 
     public int NumberOfParts() {
