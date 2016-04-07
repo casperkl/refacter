@@ -12,7 +12,7 @@ package com.fontys.softwarecraftsmanship;
 public class ProcessorPart extends Part {
     
     double speed;
-    public ProcessorPart(PartName title, double price, double speed) {
+    public ProcessorPart(PartName title, Price price, double speed) {
         super(title, price);
         this.speed=speed;
     }

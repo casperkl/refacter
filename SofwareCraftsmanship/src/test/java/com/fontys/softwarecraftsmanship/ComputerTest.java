@@ -23,7 +23,7 @@ public class ComputerTest {
      */
     @org.junit.Test
     public void testAddOnePart() {
-        Part p = new MotherboardPart(new PartName(""), 0.0);
+        Part p = new MotherboardPart(new PartName(""),new Price(0.0));
         Computer c = new Computer();
         c.AddPart(p);
         
@@ -40,7 +40,7 @@ public class ComputerTest {
         
         for (int i = 0; i < PARTS_COUNT; i++) {
             assertEquals(i, c.NumberOfParts());
-            c.AddPart(new MotherboardPart(new PartName(""), 0.0));
+            c.AddPart(new MotherboardPart(new PartName(""), new Price(0.0)));
         }
         
         assertEquals(PARTS_COUNT, c.NumberOfParts());
@@ -90,7 +90,7 @@ public class ComputerTest {
         final double EXPECTED_PRICE = 10.0;
         Computer c = new Computer();
         
-        c.AddPart(new MotherboardPart(new PartName(""), 10.0));
+        c.AddPart(new MotherboardPart(new PartName(""), new Price(10.0)));
         
         assertEquals(EXPECTED_PRICE, c.GetPrice(), 0.0);
     }
@@ -106,7 +106,7 @@ public class ComputerTest {
         Computer c = new Computer();
         
         for (int i = 0; i < PARTS_COUNT; i++) {
-            c.AddPart(new MotherboardPart(new PartName(""), PART_PRICE));
+            c.AddPart(new MotherboardPart(new PartName(""),new Price(PART_PRICE)));
             expectedPrice += PART_PRICE;
         }
         
@@ -130,7 +130,7 @@ public class ComputerTest {
     public void testOnePartComputerIsIncomplete() {
         Computer c = new Computer();
         
-        c.AddPart(new MotherboardPart(new PartName(""), 0.0));
+        c.AddPart(new MotherboardPart(new PartName(""), new Price(0.0)));
         
         assertEquals(false, c.IsComplete());
     }
@@ -142,11 +142,11 @@ public class ComputerTest {
     public void testMorePartsComputerIsIncomplete() {
         Computer c = new Computer();
         
-        c.AddPart(new MotherboardPart(new PartName(""),0.0));
-        c.AddPart(new MotherboardPart(new PartName(""), 0.0));
-        c.AddPart(new MotherboardPart(new PartName(""), 0.0));
-        c.AddPart(new MotherboardPart(new PartName(""), 0.0));
-        c.AddPart(new MotherboardPart(new PartName(""), 0.0));
+        c.AddPart(new MotherboardPart(new PartName(""),new Price(0.0)));
+        c.AddPart(new MotherboardPart(new PartName(""), new Price(0.0)));
+        c.AddPart(new MotherboardPart(new PartName(""), new Price(0.0)));
+        c.AddPart(new MotherboardPart(new PartName(""), new Price(0.0)));
+        c.AddPart(new MotherboardPart(new PartName(""), new Price(0.0)));
         
         assertEquals(false, c.IsComplete());
     }
@@ -158,10 +158,10 @@ public class ComputerTest {
     public void testComputerIsComplete() {
         Computer c = new Computer();
         
-        c.AddPart(new CasingPart(new PartName(""), 0.0, ""));
-        c.AddPart(new MotherboardPart(new PartName(""), 0.0));
-        c.AddPart(new ProcessorPart(new PartName(""), 0.0, 0.0));
-        c.AddPart(new MemoryPart(new PartName(""), 0.0, "",0));
+        c.AddPart(new CasingPart(new PartName(""), new Price(0.0), ""));
+        c.AddPart(new MotherboardPart(new PartName(""), new Price(0.0)));
+        c.AddPart(new ProcessorPart(new PartName(""), new Price(0.0), 0.0));
+        c.AddPart(new MemoryPart(new PartName(""), new Price(0.0), "",0));
         
         assertEquals(true, c.IsComplete());
     }
@@ -176,16 +176,16 @@ public class ComputerTest {
             Computer c = new Computer();
 
             if (i != 0) {
-                c.AddPart(new CasingPart(new PartName(""), 0.0, ""));
+                c.AddPart(new CasingPart(new PartName(""), new Price(0.0), ""));
             }
             if (i != 1) {
-                c.AddPart(new MotherboardPart(new PartName(""), 0.0));
+                c.AddPart(new MotherboardPart(new PartName(""), new Price(0.0)));
             }
             if (i != 2) {
-                c.AddPart(new ProcessorPart(new PartName(""), 0.0, 0.0));
+                c.AddPart(new ProcessorPart(new PartName(""), new Price(0.0), 0.0));
             }
             if (i != 3) {
-                c.AddPart(new MemoryPart(new PartName(""), 0.0, "", 0));
+                c.AddPart(new MemoryPart(new PartName(""), new Price(0.0), "", 0));
             }
 
             assertEquals(false, c.IsComplete());

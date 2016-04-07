@@ -7,12 +7,20 @@ package com.fontys.softwarecraftsmanship;
 
 /**
  *
- * @author E.Muit-Laptop
+ * @author Casper_
  */
-public class MotherboardPart extends Part{
+public class Price {
     
-    public MotherboardPart(PartName title, Price price) {
-        super(title, price);
+    double value;
+    
+    public Price(double value)
+    {
+        this.value=value;
     }
+
+    void increasePrice(Computer c) 
+    {
+        c.increasePrice(value);
+    }    
     
 }

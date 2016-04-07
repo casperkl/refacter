@@ -3,19 +3,19 @@ package com.fontys.softwarecraftsmanship;
 public class Part {
     
     private final PartName title;
-    private final double price;
+    private final Price price;
    
-    public Part(PartName title, double price) {
+    public Part(PartName title, Price price) {
         this.title = title;
         this.price = price;
     }
     
-    public double GetPrice() {
+    public Price GetPrice() {
         return price;
     }
     
     public void increasePrice(Computer c)
     {
-        c.increasePrice(price);
+        price.increasePrice(c);
     }
 }
