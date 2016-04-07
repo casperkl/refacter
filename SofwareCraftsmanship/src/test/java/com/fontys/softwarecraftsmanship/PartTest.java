@@ -23,7 +23,7 @@ public class PartTest {
         parts.add(new MotherboardPart(new PartName(""), new Price(DEFAULT_PRICE)));
         
         for (Part p : parts) {
-            assertTrue(p.EqualsPart(DEFAULT_PRICE));
+            assertTrue(p.EqualsPrice(DEFAULT_PRICE));
             //assertEquals(DEFAULT_PRICE, p.GetPrice().getValue(),0.0);
         }
     }
