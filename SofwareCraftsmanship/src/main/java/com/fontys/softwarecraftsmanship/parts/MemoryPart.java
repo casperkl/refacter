@@ -3,6 +3,7 @@ package com.fontys.softwarecraftsmanship.parts;
 import com.fontys.softwarecraftsmanship.Part;
 import com.fontys.softwarecraftsmanship.PartName;
 import com.fontys.softwarecraftsmanship.Price;
+import com.fontys.softwarecraftsmanship.Subtype;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -16,9 +17,9 @@ import com.fontys.softwarecraftsmanship.Price;
  */
 public class MemoryPart extends Part{
     
-    String subtype;
+    Subtype subtype;
     int size;
-    public MemoryPart(PartName title, Price price, String subtype, int size) {
+    public MemoryPart(PartName title, Price price, Subtype subtype, int size) {
         super(title, price);
         this.subtype=subtype;
         this.size=size;

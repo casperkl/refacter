@@ -162,10 +162,10 @@ public class ComputerTest {
     public void testComputerIsComplete() {
         Computer c = new Computer();
         
-        c.AddPart(new CasingPart(new PartName(""), new Price(0.0), ""));
+        c.AddPart(new CasingPart(new PartName(""), new Price(0.0), new Subtype("")));
         c.AddPart(new MotherboardPart(new PartName(""), new Price(0.0)));
         c.AddPart(new ProcessorPart(new PartName(""), new Price(0.0), 0.0));
-        c.AddPart(new MemoryPart(new PartName(""), new Price(0.0), "",0));
+        c.AddPart(new MemoryPart(new PartName(""), new Price(0.0), new Subtype(""),0));
         
         assertEquals(true, c.IsComplete());
     }
@@ -180,7 +180,7 @@ public class ComputerTest {
             Computer c = new Computer();
 
             if (i != 0) {
-                c.AddPart(new CasingPart(new PartName(""), new Price(0.0), ""));
+                c.AddPart(new CasingPart(new PartName(""), new Price(0.0), new Subtype("")));
             }
             if (i != 1) {
                 c.AddPart(new MotherboardPart(new PartName(""), new Price(0.0)));
@@ -189,7 +189,7 @@ public class ComputerTest {
                 c.AddPart(new ProcessorPart(new PartName(""), new Price(0.0), 0.0));
             }
             if (i != 3) {
-                c.AddPart(new MemoryPart(new PartName(""), new Price(0.0), "", 0));
+                c.AddPart(new MemoryPart(new PartName(""), new Price(0.0), new Subtype(""), 0));
             }
 
             assertEquals(false, c.IsComplete());

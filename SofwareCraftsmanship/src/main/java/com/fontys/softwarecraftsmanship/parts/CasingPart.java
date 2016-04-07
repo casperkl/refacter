@@ -8,6 +8,7 @@ package com.fontys.softwarecraftsmanship.parts;
 import com.fontys.softwarecraftsmanship.Part;
 import com.fontys.softwarecraftsmanship.PartName;
 import com.fontys.softwarecraftsmanship.Price;
+import com.fontys.softwarecraftsmanship.Subtype;
 
 /**
  *
@@ -15,8 +16,8 @@ import com.fontys.softwarecraftsmanship.Price;
  */
 public class CasingPart extends Part {
     
-    String subtype;
-    public CasingPart(PartName title, Price price, String subtype) {
+    Subtype subtype;
+    public CasingPart(PartName title, Price price, Subtype subtype) {
         super(title, price);
         this.subtype=subtype;
     }
