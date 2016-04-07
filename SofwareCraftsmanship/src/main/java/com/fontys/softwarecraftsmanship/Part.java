@@ -10,7 +10,9 @@ public class Part {
         this.price = price;
     }
     
-    public Price GetPrice() {
+    
+    //Aanwezig voor unittests.
+    public double GetPrice() {
         return price;
     }
     
