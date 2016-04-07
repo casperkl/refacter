@@ -15,12 +15,12 @@ public class Computer {
     }
 
     public void AddPart(Part p) {
-        if (p!=null)
-        parts.add(p);
+        if (p != null) {
+            parts.add(p);
+        }
     }
-    
-    public void increasePrice(double increase)
-    {
+
+    public void increasePrice(double increase) {
         price += increase;
     }
 
@@ -45,8 +45,8 @@ public class Computer {
             hasMotherboard = isMotherboard(part, hasMotherboard);
         }
 
-            return !(!hasCasing || !hasProcessor || !hasMemory || !hasMotherboard);
-        
+        return !(!hasCasing || !hasProcessor || !hasMemory || !hasMotherboard);
+
     }
 
     boolean isCasing(Part part, boolean currentValue) {

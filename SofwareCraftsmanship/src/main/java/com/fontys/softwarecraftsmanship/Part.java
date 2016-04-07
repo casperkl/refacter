@@ -11,9 +11,9 @@ public class Part {
     }
     
     
-    //Aanwezig voor unittests.
-    public Price GetPrice() {
-        return price;
+    public boolean EqualsPart(double val)
+    {
+        return price.eqaulsPrice(val);
     }
     
     public void increasePrice(Computer c)

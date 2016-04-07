@@ -13,6 +13,8 @@ public class Price {
     
     double value;
     
+
+
     public Price(double value)
     {
         this.value=value;
@@ -21,6 +23,9 @@ public class Price {
     void increasePrice(Computer c) 
     {
         c.increasePrice(value);
-    }    
-    
+    }   
+           public boolean eqaulsPrice(double v)
+        {
+            return value==v;
+        }
 }
