@@ -11,7 +11,7 @@ package com.fontys.softwarecraftsmanship;
  */
 public class MotherboardPart extends Part{
     
-    public MotherboardPart(String title, double price) {
+    public MotherboardPart(PartName title, double price) {
         super(title, price);
     }
     

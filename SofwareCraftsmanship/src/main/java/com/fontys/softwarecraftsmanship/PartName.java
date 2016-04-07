@@ -7,14 +7,14 @@ package com.fontys.softwarecraftsmanship;
 
 /**
  *
- * @author E.Muit-Laptop
+ * @author Casper_
  */
-public class ProcessorPart extends Part {
+public class PartName {
     
-    double speed;
-    public ProcessorPart(PartName title, double price, double speed) {
-        super(title, price);
-        this.speed=speed;
+    private String name;
+    
+    public PartName(String name)
+    {
+        this.name=name;
     }
-    
 }

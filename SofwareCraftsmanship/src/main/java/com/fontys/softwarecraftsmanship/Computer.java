@@ -42,10 +42,7 @@ public class Computer {
             hasMotherboard = isMotherboard(part, hasMotherboard);
         }
 
-        if (!hasCasing || !hasProcessor || !hasMemory || !hasMotherboard) {
-            return false;
-        } 
-            return true;
+            return !(!hasCasing || !hasProcessor || !hasMemory || !hasMotherboard);
         
     }
 

@@ -2,10 +2,10 @@ package com.fontys.softwarecraftsmanship;
 
 public class Part {
     
-    private final String title;
+    private final PartName title;
     private final double price;
    
-    public Part(String title, double price) {
+    public Part(PartName title, double price) {
         this.title = title;
         this.price = price;
     }

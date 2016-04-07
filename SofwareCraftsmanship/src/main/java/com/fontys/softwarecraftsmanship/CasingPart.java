@@ -12,7 +12,7 @@ package com.fontys.softwarecraftsmanship;
 public class CasingPart extends Part {
     
     String subtype;
-    public CasingPart(String title, double price, String subtype) {
+    public CasingPart(PartName title, double price, String subtype) {
         super(title, price);
         this.subtype=subtype;
     }
