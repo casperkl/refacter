@@ -158,10 +158,10 @@ public class ComputerTest {
     public void testComputerIsComplete() {
         Computer c = new Computer();
         
-        c.AddPart(new Part("Casing", "", 0.0, ""));
-        c.AddPart(new Part("Motherboard", "", 0.0));
-        c.AddPart(new Part("Processor", "", 0.0, 0.0));
-        c.AddPart(new Part("Memory", "", 0.0, "",0));
+        c.AddPart(new CasingPart("Casing", "", 0.0, ""));
+        c.AddPart(new MotherboardPart("Motherboard", "", 0.0));
+        c.AddPart(new ProcessorPart("Processor", "", 0.0, 0.0));
+        c.AddPart(new MemoryPart("Memory", "", 0.0, "",0));
         
         assertEquals(true, c.IsComplete());
     }
