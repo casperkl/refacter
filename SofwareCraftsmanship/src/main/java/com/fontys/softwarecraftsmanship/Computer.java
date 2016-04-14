@@ -1,9 +1,5 @@
 package com.fontys.softwarecraftsmanship;
-
-import com.fontys.softwarecraftsmanship.parts.MotherboardPart;
-import com.fontys.softwarecraftsmanship.parts.ProcessorPart;
-import com.fontys.softwarecraftsmanship.parts.MemoryPart;
-import com.fontys.softwarecraftsmanship.parts.CasingPart;
+import com.fontys.softwarecraftsmanship.parts.*;
 
 public class Computer {
 
@@ -33,46 +29,20 @@ public class Computer {
     }
 
     public boolean IsComplete() {
-        boolean[] completeness = {false,false,false,false};
+        boolean[] completeness = {false, false, false, false};
         for (Part part : parts) {
-            completeness[0] = isCasing(part, completeness[0]);
-            completeness[1] = isProcessor(part, completeness[1]);
-            completeness[2] = isMemory(part, completeness[2]);
-            completeness[3] = isMotherboard(part, completeness[3]);
+            completeness[0] = isTypeOfPart(part, completeness[0], CasingPart.class);
+            completeness[1] = isTypeOfPart(part, completeness[1], ProcessorPart.class);
+            completeness[2] = isTypeOfPart(part, completeness[2], MemoryPart.class);
+            completeness[3] = isTypeOfPart(part, completeness[3], MotherboardPart.class);
         }
         return !(!completeness[0] || !completeness[1] || !completeness[2] || !completeness[3]);
-
     }
 
-    boolean isCasing(Part part, boolean currentValue) {
-        if (part instanceof CasingPart) {
+    boolean isTypeOfPart(Part part, boolean currentValue, Class clazz) {
+        if (clazz.isInstance(part)) {
             return true;
         }
-
-        return currentValue;
-    }
-
-    boolean isMemory(Part part, boolean currentValue) {
-        if (part instanceof MemoryPart) {
-            return true;
-        }
-
-        return currentValue;
-    }
-
-    boolean isProcessor(Part part, boolean currentValue) {
-        if (part instanceof ProcessorPart) {
-            return true;
-        }
-
-        return currentValue;
-    }
-
-    boolean isMotherboard(Part part, boolean currentValue) {
-        if (part instanceof MotherboardPart) {
-            return true;
-        }
-
         return currentValue;
     }
 }
