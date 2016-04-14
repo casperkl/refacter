@@ -18,8 +18,9 @@ import com.fontys.softwarecraftsmanship.Subtype;
  */
 public class MemoryPart extends Part{
     
-    Subtype subtype;
-    Size size;
+    private Subtype subtype;
+    private Size size;
+    
     public MemoryPart(PartName title, Price price, Subtype subtype, Size size) {
         super(title, price);
         this.subtype=subtype;

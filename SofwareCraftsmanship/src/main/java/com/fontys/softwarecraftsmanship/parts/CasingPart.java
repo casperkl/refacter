@@ -16,7 +16,8 @@ import com.fontys.softwarecraftsmanship.Subtype;
  */
 public class CasingPart extends Part {
     
-    Subtype subtype;
+    private Subtype subtype;
+    
     public CasingPart(PartName title, Price price, Subtype subtype) {
         super(title, price);
         this.subtype=subtype;

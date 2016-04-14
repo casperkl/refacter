@@ -11,7 +11,7 @@ package com.fontys.softwarecraftsmanship;
  */
 public class Size {
     
-    int size;
+    private int size;
     
     public Size(int size)
     {

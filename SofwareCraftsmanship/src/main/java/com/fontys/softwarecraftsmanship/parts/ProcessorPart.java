@@ -16,7 +16,8 @@ import com.fontys.softwarecraftsmanship.Speed;
  */
 public class ProcessorPart extends Part {
     
-    Speed speed;
+    private Speed speed;
+    
     public ProcessorPart(PartName title, Price price, Speed speed) {
         super(title, price);
         this.speed=speed;

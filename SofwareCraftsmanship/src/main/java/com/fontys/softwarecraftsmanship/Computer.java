@@ -7,8 +7,8 @@ import com.fontys.softwarecraftsmanship.parts.CasingPart;
 
 public class Computer {
 
-    Partlist parts = new Partlist();
-    double price = 0;
+    private Partlist parts = new Partlist();
+    private Price price = new Price(0);
 
     public int NumberOfParts() {
         return parts.size();
@@ -21,10 +21,10 @@ public class Computer {
     }
 
     public void increasePrice(double increase) {
-        price += increase;
+        price.increasePriceBy(increase);
     }
 
-    public double GetPrice() {
+    public Price CalculatePrice() {
         for (int i = 0; i < NumberOfParts(); i++) {
             Part part = parts.get(i);
             part.increasePrice(this);
@@ -33,19 +33,14 @@ public class Computer {
     }
 
     public boolean IsComplete() {
-        boolean hasCasing = false;
-        boolean hasProcessor = false;
-        boolean hasMemory = false;
-        boolean hasMotherboard = false;
-
+        boolean[] completeness = {false,false,false,false};
         for (Part part : parts) {
-            hasCasing = isCasing(part, hasCasing);
-            hasProcessor = isProcessor(part, hasProcessor);
-            hasMemory = isMemory(part, hasMemory);
-            hasMotherboard = isMotherboard(part, hasMotherboard);
+            completeness[0] = isCasing(part, completeness[0]);
+            completeness[1] = isProcessor(part, completeness[1]);
+            completeness[2] = isMemory(part, completeness[2]);
+            completeness[3] = isMotherboard(part, completeness[3]);
         }
-
-        return !(!hasCasing || !hasProcessor || !hasMemory || !hasMotherboard);
+        return !(!completeness[0] || !completeness[1] || !completeness[2] || !completeness[3]);
 
     }
 

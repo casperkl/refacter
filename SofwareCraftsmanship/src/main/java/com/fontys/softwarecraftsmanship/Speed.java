@@ -11,7 +11,7 @@ package com.fontys.softwarecraftsmanship;
  * @author E.Muit-Laptop
  */
 public class Speed {
-    double speed;
+    private double speed;
     
     public Speed(double speed)
     {

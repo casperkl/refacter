@@ -11,9 +11,7 @@ package com.fontys.softwarecraftsmanship;
  */
 public class Price {
     
-    double value;
-    
-
+    private double value;
 
     public Price(double value)
     {
@@ -28,4 +26,8 @@ public class Price {
         {
             return value==v;
         }
+
+    void increasePriceBy(double increase) {
+        value+=increase;
+    }
 }

@@ -11,7 +11,7 @@ package com.fontys.softwarecraftsmanship;
  */
 public class Subtype {
     
-    String subtype;
+    private String subtype;
     
     public Subtype(String subtype)
     {

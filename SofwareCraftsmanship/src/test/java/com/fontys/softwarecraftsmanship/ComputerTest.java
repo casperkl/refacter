@@ -82,8 +82,7 @@ public class ComputerTest {
     @org.junit.Test
     public void testGetEmptyComputerPrice() {
         Computer c = new Computer();
-        
-        assertEquals(0.0, c.GetPrice(), 0.0);
+        assertTrue(c.CalculatePrice().eqaulsPrice(0.0));
     }
 
     /**
@@ -96,7 +95,7 @@ public class ComputerTest {
         
         c.AddPart(new MotherboardPart(new PartName(""), new Price(10.0)));
         
-        assertEquals(EXPECTED_PRICE, c.GetPrice(), 0.0);
+        assertTrue(c.CalculatePrice().eqaulsPrice(EXPECTED_PRICE));
     }
 
     /**
@@ -111,10 +110,9 @@ public class ComputerTest {
         
         for (int i = 0; i < PARTS_COUNT; i++) {
             c.AddPart(new MotherboardPart(new PartName(""),new Price(PART_PRICE)));
-            expectedPrice += PART_PRICE;
+            expectedPrice+=PART_PRICE;
         }
-        
-        assertEquals(expectedPrice, c.GetPrice(), 0.0);
+        assertTrue(c.CalculatePrice().eqaulsPrice(expectedPrice));
     }
 
     /**

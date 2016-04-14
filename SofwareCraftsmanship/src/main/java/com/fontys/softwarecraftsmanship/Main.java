@@ -17,7 +17,7 @@ public class Main {
         c.AddPart(new MotherboardPart(new PartName("MSI H97 PC MATE - Socket 1150 - ATX"), new Price(89.0)));
         
         if (c.IsComplete()) {
-            System.out.println("Total price is EUR " + c.GetPrice());
+            System.out.println("Total price is EUR " + c.CalculatePrice());
         }
         if (!c.IsComplete()){
             System.out.println("Your computer is not ready yet...");
