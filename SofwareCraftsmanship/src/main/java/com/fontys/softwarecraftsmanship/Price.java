@@ -18,13 +18,13 @@ public class Price {
         this.value=value;
     }
 
-    void increasePrice(Computer c) 
+    void increasePrice(Computer computer) 
     {
-        c.increasePrice(value);
+        computer.increasePrice(value);
     }   
-           public boolean eqaulsPrice(double v)
+           public boolean eqaulsPrice(double value)
         {
-            return value==v;
+            return this.value==value;
         }
 
     void increasePriceBy(double increase) {

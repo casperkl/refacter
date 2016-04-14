@@ -14,9 +14,9 @@ public class Computer {
         return parts.size();
     }
 
-    public void AddPart(Part p) {
-        if (p != null) {
-            parts.add(p);
+    public void AddPart(Part part) {
+        if (part != null) {
+            parts.add(part);
         }
     }
 

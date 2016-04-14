@@ -11,13 +11,13 @@ public class Part {
     }
     
     
-    public boolean EqualsPrice(double val)
+    public boolean EqualsPrice(double value)
     {
-        return price.eqaulsPrice(val);
+        return price.eqaulsPrice(value);
     }
     
-    public void increasePrice(Computer c)
+    public void increasePrice(Computer computer)
     {
-        price.increasePrice(c);
+        price.increasePrice(computer);
     }
 }
